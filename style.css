@@ -250,4 +250,7 @@ opacity: .6;
 max-width: 520px;
 margin: 0 auto;
 }
+
 }
+
+/* Para pantallas chicas (celulares en vertical) */ @media (max-width: 767px) { .bio-container { max-width: 100%; /* ocupa todo el ancho */ padding: 0 16px; /* un margen interno para que no pegue contra los bordes */ font-size: 1rem; /* ajusta el tamaño de texto si hace falta */ } }
