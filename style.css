@@ -1,0 +1,253 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Staatliches', serif;
+  background: radial-gradient(circle at top, #0d0015, #050505);
+  color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  letter-spacing: .08em;
+}
+
+/* CONTENEDOR */
+.container {
+  width: 100%;
+  max-width: 420px;
+  padding: 2rem 1.5rem;
+}
+
+/* PERFIL */
+.profile {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+/* SELLO CIRCULAR */
+.seal {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 1.2rem;
+  border-radius: 50%;
+  border: 2px dashed rgba(245,245,245,.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: slowspin 20s linear infinite;
+}
+
+/* TEXTO CIRCULAR */
+.seal-text {
+  position: absolute;
+  font-size: .55rem;
+  color: rgba(245,245,245,.6);
+}
+
+.seal-text.top {
+  top: 10px;
+}
+
+.seal-text.bottom {
+  bottom: 10px;
+}
+
+/* AVATAR LOGO */
+.avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: url("julian.jpg") center / cover no-repeat;
+  box-shadow:
+    0 0 10px rgba(122,15,15,.7),
+    0 0 25px rgba(90,26,120,.5);
+}
+
+/* TEXTO PERFIL */
+.profile h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.subtitle {
+  opacity: .65;
+  font-size: .8rem;
+}
+
+/* REDES */
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.socials a {
+  text-decoration: none;
+  color: #f5f5f5;
+  font-size: .75rem;
+  opacity: .6;
+  transition: .3s;
+}
+
+.socials a:hover {
+  opacity: 1;
+  color: #7a0f0f;
+}
+
+/* LINKS */
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.link-card {
+  text-decoration: none;
+  color: #f5f5f5;
+  padding: 1rem;
+  border-radius: 12px;
+  background: rgba(10,10,10,.85);
+  border: 1px solid rgba(245,245,245,.15);
+  text-align: center;
+  transition: all .25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* EFECTO TINTA */
+.link-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(90,26,120,.2), transparent);
+  opacity: 0;
+  transition: .3s;
+}
+
+.link-card:hover::after {
+  opacity: 1;
+}
+
+.link-card:hover {
+  transform: translateY(-2px) scale(1.01);
+  background: linear-gradient(135deg, #5a1a78, #7a0f0f);
+  border-color: rgba(245,245,245,.4);
+}
+
+/* DESTACADOS */
+.highlight {
+  border: 2px solid rgba(245,245,245,.5);
+}
+
+/* FOOTER */
+footer {
+  margin-top: auto;
+  padding: 1rem;
+  font-size: .6rem;
+  opacity: .4;
+  letter-spacing: .15em;
+}
+
+/* ANIMACIÓN SELLO */
+@keyframes slowspin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* HEADER QUIEN SOY */
+
+
+/* BLOQUE SELLO */
+.bio-seal {
+text-align: center;
+}
+
+
+.bio-seal h2 {
+margin: .5rem 0 0;
+font-size: 1.4rem;
+}
+
+
+.bio-sub {
+font-size: .8rem;
+opacity: .6;
+}
+
+
+/* BLOQUES TEXTO */
+.bio-block {
+padding: 1.5rem;
+background: rgba(10,10,10,.8);
+border: 1px solid rgba(245,245,245,.15);
+border-radius: 14px;
+}
+
+
+.bio-block h3 {
+margin-top: 0;
+font-size: .9rem;
+letter-spacing: .15em;
+}
+
+
+.bio-block p,
+.bio-block li {
+font-family: Georgia, serif;
+font-size: .85rem;
+line-height: 1.6;
+opacity: .85;
+}
+
+
+.bio-block ul {
+padding-left: 1.2rem;
+}
+
+
+/* BLOQUE DESTACADO */
+.highlight-block {
+background: linear-gradient(135deg, rgba(90,26,120,.2), rgba(122,15,15,.2));
+border: 1px solid rgba(245,245,245,.3);
+}
+
+
+/* FIRMA */
+.bio-sign {
+text-align: center;
+padding: 2rem 1rem;
+border-top: 1px dashed rgba(245,245,245,.3);
+border-bottom: 1px dashed rgba(245,245,245,.3);
+}
+
+
+.bio-sign p {
+margin: .5rem 0;
+font-size: .8rem;
+letter-spacing: .2em;
+}
+
+
+.signature {
+display: block;
+margin-top: 1rem;
+font-size: .7rem;
+opacity: .6;
+}
+
+
+/* RESPONSIVE */
+@media (min-width: 768px) {
+.bio-container {
+max-width: 520px;
+margin: 0 auto;
+}
+}
